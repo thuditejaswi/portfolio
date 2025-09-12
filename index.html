@@ -124,9 +124,8 @@
             align-items: center;
             padding: 0 5%;
             background: #1F1C2C;  
-background: -webkit-linear-gradient(to right, #926DAB, #1F1C2C); 
-background: linear-gradient(to right, #928DAB, #1F1C2C); 
-
+            background: -webkit-linear-gradient(to right, #926DAB, #1F1C2C); 
+            background: linear-gradient(to right, #928DAB, #1F1C2C); 
             color: white;
             position: relative;
         }
@@ -300,11 +299,175 @@ background: linear-gradient(to right, #928DAB, #1F1C2C);
             font-weight: 600;
             margin-right: 0.5rem;
         }
+
+        /* Experience Section */
+        #experience {
+            padding: 7rem 5%;
+            background-color: #f9f9f9;
+        }
+
+        .experience-timeline {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .experience-timeline::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background: linear-gradient(to bottom, var(--primary), var(--secondary));
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -2px;
+            border-radius: 2px;
+        }
+
+        .experience-item {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .experience-item.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .experience-item::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            right: -10px;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            border-radius: 50%;
+            top: 30px;
+            box-shadow: 0 0 0 4px white, 0 0 0 8px var(--secondary);
+        }
+
+        .experience-item:nth-child(even) {
+            left: 50%;
+        }
+
+        .experience-item:nth-child(even)::after {
+            left: -10px;
+        }
+
+        .experience-content {
+            padding: 2rem;
+            background: white;
+            position: relative;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+        }
+
+        .experience-content:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .experience-role {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .experience-company {
+            font-size: 1.2rem;
+            color: var(--secondary);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .experience-duration {
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+
+        .experience-description {
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+            color: #555;
+        }
+
+        .experience-projects {
+            margin-bottom: 1.5rem;
+        }
+
+        .experience-projects h4 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .project-list {
+            list-style: none;
+        }
+
+        .project-list li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.8rem;
+            line-height: 1.6;
+        }
+
+        .project-list li::before {
+            content: '⚡';
+            position: absolute;
+            left: 0;
+            color: var(--secondary);
+            font-weight: bold;
+        }
+
+        .experience-skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .experience-skill {
+            background-color: #f0f0f0;
+            color: var(--primary);
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .experience-skill:hover {
+            background-color: var(--secondary);
+            color: white;
+            transform: translateY(-2px);
+        }
         
         /* Skills Section */
         #skills {
             padding: 7rem 5%;
-            background-color: #f9f9f9;
+            background-color: white;
         }
         
         .skills-container {
@@ -314,7 +477,7 @@ background: linear-gradient(to right, #928DAB, #1F1C2C);
         }
         
         .skill-card {
-            background-color: white;
+            background-color: #f9f9f9;
             border-radius: 10px;
             padding: 2rem;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
@@ -376,7 +539,7 @@ background: linear-gradient(to right, #928DAB, #1F1C2C);
         /* Projects Section */
         #projects {
             padding: 7rem 5%;
-            background-color: white;
+            background-color: #f9f9f9;
         }
         
         .projects-container {
@@ -459,7 +622,7 @@ background: linear-gradient(to right, #928DAB, #1F1C2C);
         /* Contact Section */
         #contact {
             padding: 7rem 5%;
-            background-color: #f9f9f9;
+            background-color: white;
         }
         
         .contact-container {
@@ -505,7 +668,7 @@ background: linear-gradient(to right, #928DAB, #1F1C2C);
         .contact-form {
             flex: 1;
             min-width: 300px;
-            background-color: white;
+            background-color: #f9f9f9;
             padding: 2.5rem;
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
@@ -623,7 +786,7 @@ background: linear-gradient(to right, #928DAB, #1F1C2C);
             }
             
             .nav-links.active {
-                height: 300px;
+                height: 350px;
                 padding: 1rem 0;
             }
             
@@ -666,6 +829,30 @@ background: linear-gradient(to right, #928DAB, #1F1C2C);
             .section-title {
                 font-size: 2rem;
             }
+
+            /* Experience Timeline Responsive */
+            .experience-timeline::after {
+                left: 31px;
+            }
+
+            .experience-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+
+            .experience-item::after {
+                left: 21px;
+            }
+
+            .experience-item:nth-child(even) {
+                left: 0%;
+            }
+
+            .experience-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
         }
     </style>
 </head>
@@ -677,6 +864,7 @@ background: linear-gradient(to right, #928DAB, #1F1C2C);
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -695,7 +883,7 @@ background: linear-gradient(to right, #928DAB, #1F1C2C);
             <img src="face.jpg" alt=" Picture" class="home-img">
             <div class="home-text">
                 <h1>Hi, I'm <span style="color: var(--accent);">Thudi Tejaswi</span></h1>
-                <p class="typewriter">Web Developer & Designer</p>
+                <p class="typewriter">AI Engineer & Web Developer</p>
             </div>
             <div class="social-icons">
                 <a href="https://github.com/thuditejaswi" target="_blank" class="social-icon">
@@ -713,9 +901,9 @@ background: linear-gradient(to right, #928DAB, #1F1C2C);
         <h2 class="section-title animate">About Me</h2>
         <div class="about-content">
             <div class="about-text animate">
-                <p>Hello! I'm a passionate web developer with a keen eye for design and a love for creating interactive, responsive websites. With expertise in HTML, CSS, and JavaScript, I specialize in building modern web applications that deliver exceptional user experiences.</p>
+                <p>Hello! I'm a passionate AI Engineer and web developer with a keen eye for design and a love for creating innovative solutions. With expertise in artificial intelligence, machine learning, and full-stack development, I specialize in building intelligent applications that deliver exceptional user experiences.</p>
                 
-                <p>I believe in writing clean, efficient code and staying up-to-date with the latest web technologies. Whether it's front-end development, back-end programming, or full-stack solutions, I'm dedicated to delivering high-quality work that exceeds expectations.</p>
+                <p>I believe in leveraging cutting-edge AI technologies while maintaining clean, efficient code practices. Whether it's developing AI models, creating workflow automations, or building responsive web applications, I'm dedicated to delivering high-quality solutions that push the boundaries of technology.</p>
                 
                 <div class="personal-info animate">
                     <ul class="info-list">
@@ -746,6 +934,48 @@ background: linear-gradient(to right, #928DAB, #1F1C2C);
         </div>
     </section>
 
+    <!-- Experience Section -->
+    <section id="experience">
+        <h2 class="section-title animate">Professional Experience</h2>
+                <div class="experience-content">
+                    <div class="experience-header">
+                        <div>
+                            <div class="experience-role">AI Engineer Intern</div>
+                            <div class="experience-company">Kodryx AI</div>
+                        </div>
+                        <div class="experience-duration">2025 - Present</div>
+                    </div>
+                    
+                    <div class="experience-description">
+                        Worked as an AI Engineer Intern at Kodryx AI, focusing on developing cutting-edge artificial intelligence solutions and workflow automation systems. Gained hands-on experience in implementing AI models and creating efficient automation pipelines.
+                    </div>
+
+                    <div class="experience-projects">
+                        <h4>Key Projects & Achievements:</h4>
+                        <ul class="project-list">
+                            <strong>Speaker Diarization System:</strong> Developed an advanced speaker diarization model capable of identifying and segmenting different speakers in audio recordings with high accuracy.
+                           <br> <br> <strong>N8N Workflow Automations:</strong> Designed and implemented multiple workflow automation solutions using N8N, streamlining business processes and improving operational efficiency.
+                            <br> <br><strong>AI Model Integration:</strong> Successfully integrated various AI models into production environments, ensuring optimal performance and scalability.
+                            <br> <br><strong>Data Processing Pipelines:</strong> Built robust data processing pipelines for handling large-scale audio and text data for AI training and inference.
+                        </ul>
+                    </div>
+
+                    <div class="experience-skills">
+                        <span class="experience-skill">Python</span>
+                        <span class="experience-skill">Machine Learning</span>
+                        <span class="experience-skill">Deep Learning</span>
+                        <span class="experience-skill">Speaker Diarization</span>
+                        <span class="experience-skill">N8N</span>
+                        <span class="experience-skill">Workflow Automation</span>
+                        <span class="experience-skill">AI Model Deployment</span>
+                        <span class="experience-skill">Data Processing</span>
+                        <span class="experience-skill">TensorFlow</span>
+                        <span class="experience-skill">PyTorch</span>
+                    </div>
+
+        </div>
+    </section>
+
     <!-- Skills Section -->
     <section id="skills">
         <h2 class="section-title animate">My Skills</h2>
@@ -763,10 +993,10 @@ background: linear-gradient(to right, #928DAB, #1F1C2C);
                     </li>
                     <li class="skill-item">JavaScript
                         <div class="progress-bar">
-                            <div class="progress" style="width: 0%;" data-width="90%"></div>
+                            <div class="progress" style="width: 0%;" data-width="70%"></div>
                         </div>
                     </li>
-                    <li class="skill-item">React.js
+                    <li class="skill-item">Bootstrap
                         <div class="progress-bar">
                             <div class="progress" style="width: 0%;" data-width="85%"></div>
                         </div>
@@ -780,14 +1010,14 @@ background: linear-gradient(to right, #928DAB, #1F1C2C);
                 </div>
                 <h3 class="skill-title">Backend Development</h3>
                 <ul class="skill-list">
-                    <li class="skill-item">Node.js
+                    <li class="skill-item">C
                         <div class="progress-bar">
-                            <div class="progress" style="width: 0%;" data-width="80%"></div>
+                            <div class="progress" style="width: 0%;" data-width="70%"></div>
                         </div>
                     </li>
                     <li class="skill-item">Python
                         <div class="progress-bar">
-                            <div class="progress" style="width: 0%;" data-width="75%"></div>
+                            <div class="progress" style="width: 0%;" data-width="90%"></div>
                         </div>
                     </li>
                     <li class="skill-item">SQL & MongoDB
@@ -798,6 +1028,78 @@ background: linear-gradient(to right, #928DAB, #1F1C2C);
                 </ul>
             </div>
             
+            <div class="skill-card animate">
+                <div class="skill-icon">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <h3 class="skill-title">AI & Machine Learning</h3>
+                <ul class="skill-list">
+                    <li class="skill-item">Machine Learning
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 0%;" data-width="85%"></div>
+                        </div>
+                    </li>
+                    <li class="skill-item">Deep Learning
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 0%;" data-width="70%"></div>
+                        </div>
+                    </li>
+                    <li class="skill-item">TensorFlow & PyTorch
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 0%;" data-width="75%"></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="skill-card animate">
+                <div class="skill-icon">
+                    <i class="fa-solid fa-chart-simple"></i>
+                </div>
+                <h3 class="skill-title">Data Analysis</h3>
+                <ul class="skill-list">
+                    <li class="skill-item">Microsoft Excel
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 0%;" data-width="80%"></div>
+                        </div>
+                    </li>
+                    <li class="skill-item">Python
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 0%;" data-width="85%"></div>
+                        </div>
+                    </li>
+                    <li class="skill-item">Data Visualization
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 0%;" data-width="75%"></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="skill-card animate">
+                <div class="skill-icon">
+                    <i class="fas fa-cogs"></i>
+                </div>
+                <h3 class="skill-title">Automation & Tools</h3>
+                <ul class="skill-list">
+                    <li class="skill-item">N8N Workflows
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 0%;" data-width="85%"></div>
+                        </div>
+                    </li>
+                    <li class="skill-item">Git & GitHub
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 0%;" data-width="90%"></div>
+                        </div>
+                    </li>
+                    <li class="skill-item">Docker
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 0%;" data-width="70%"></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
             <div class="skill-card animate">
                 <div class="skill-icon">
                     <i class="fas fa-palette"></i>
@@ -814,40 +1116,13 @@ background: linear-gradient(to right, #928DAB, #1F1C2C);
                             <div class="progress" style="width: 0%;" data-width="90%"></div>
                         </div>
                     </li>
-                    <li class="skill-item">Git & GitHub
+                    <li class="skill-item">Speaker Diarization
                         <div class="progress-bar">
-                            <div class="progress" style="width: 0%;" data-width="85%"></div>
+                            <div class="progress" style="width: 0%;" data-width="80%"></div>
                         </div>
                     </li>
                 </ul>
             </div>
-
-            <div class="skill-card animate">
-              <div class="skill-icon">
-                <i class="fa-solid fa-chart-simple"></i>
-             
-              </div>
-              <h3 class="skill-title">Data Analysis</h3>
-              <ul class="skill-list">
-                  <li class="skill-item">Microsoft Excel
-                      <div class="progress-bar">
-                          <div class="progress" style="width: 0%;" data-width="80%"></div>
-                      </div>
-                  </li>
-                  <li class="skill-item">Python
-                      <div class="progress-bar">
-                          <div class="progress" style="width: 0%;" data-width="75%"></div>
-                      </div>
-                  </li>
-                  <li class="skill-item">Data visualization
-                      <div class="progress-bar">
-                          <div class="progress" style="width: 0%;" data-width="55%"></div>
-                      </div>
-                  </li>
-              </ul>
-          </div>
-
-
         </div>
     </section>
 
@@ -856,20 +1131,21 @@ background: linear-gradient(to right, #928DAB, #1F1C2C);
         <h2 class="section-title animate">My Projects</h2>
         <div class="projects-container">
             <div class="project-card animate">
-                <img src="link.png" alt="Project 1" class="project-img">
+                <img src="Docuca.png" alt="Project 1" class="project-img">
                 <div class="project-content">
-                    <h3 class="project-title">linkedin Clone</h3>
-                    <p class="project-desc">A fully responsive Linkedin profile page clone.</p>
+                    <h3 class="project-title">DocuCA</h3>
+                    <p class="project-desc">Built a full-stack application to analyze large structured transaction files. Implemented auto-categorization of payments and advanced filtering by name, type,
+ and date. Enabled CSV exports and optimized app for large dataset performance.</p>
                     <div class="project-techs">
-                        <span class="project-tech">HTML</span>
-                        <span class="project-tech">CSS</span>
-                        <span class="project-tech">Bootstarp</span>
+                        <span class="project-tech">Python</span>
+                        <span class="project-tech">Frontend</span>
+                        <span class="project-tech">CSV</span>
                     </div>
                     <div class="project-links">
-                        <a href="https://tejaswi-linkediinclone.netlify.app/  " class="project-link">
+                        <a href="https://customerchatbox.netlify.app/" class="project-link">
                             <i class="fas fa-external-link-alt"></i> Live Demo
                         </a>
-                        <a href="  https://github.com/thuditejaswi/Linkedinclone" class="project-link">
+                        <a href="https://github.com/thuditejaswi/docuca" class="project-link">
                             <i class="fab fa-github"></i> Source Code
                         </a>
                     </div>
@@ -880,7 +1156,7 @@ background: linear-gradient(to right, #928DAB, #1F1C2C);
                 <img src="nike.png" alt="Project 2" class="project-img">
                 <div class="project-content">
                     <h3 class="project-title">Nike Website</h3>
-                    <p class="project-desc">A Nike website with smooth animations and responsive design.</p>
+                    <p class="project-desc">A Nike website with smooth animations and responsive design showcasing modern web development techniques.</p>
                     <div class="project-techs">
                         <span class="project-tech">HTML</span>
                         <span class="project-tech">CSS</span>
@@ -901,17 +1177,17 @@ background: linear-gradient(to right, #928DAB, #1F1C2C);
                 <img src="netflix.png" alt="Project 3" class="project-img">
                 <div class="project-content">
                     <h3 class="project-title">Netflix Clone</h3>
-                    <p class="project-desc">Netflix Home page Clone with responsiveness .</p>
+                    <p class="project-desc">Netflix home page clone with responsive design and modern UI/UX elements.</p>
                     <div class="project-techs">
                         <span class="project-tech">HTML</span>
                         <span class="project-tech">CSS</span>
-                        <!-- <span class="project-tech">Socket.io</span> -->
+                        <span class="project-tech">Responsive Design</span>
                     </div>
                     <div class="project-links">
-                        <a href="  https://tejaswi-nclone.netlify.app/  " class="project-link">
+                        <a href="https://tejaswi-nclone.netlify.app/" class="project-link">
                             <i class="fas fa-external-link-alt"></i> Live Demo
                         </a>
-                        <a href=" https://github.com/thuditejaswi/netflixclone   " class="project-link">
+                        <a href="https://github.com/thuditejaswi/netflixclone" class="project-link">
                             <i class="fab fa-github"></i> Source Code
                         </a>
                     </div>
@@ -925,7 +1201,7 @@ background: linear-gradient(to right, #928DAB, #1F1C2C);
         <h2 class="section-title animate">Get In Touch</h2>
         <div class="contact-container">
             <div class="contact-info animate">
-                <p>I'm always open to discussing new projects, creative ideas or opportunities to be part of your vision. Feel free to contact me using the form or through my contact details.</p>
+                <p>I'm always open to discussing new projects, creative ideas, or opportunities in AI and web development. Feel free to contact me using the form or through my contact details.</p>
                 <ul class="contact-details">
                     <li>
                         <i class="fas fa-map-marker-alt"></i>
@@ -941,20 +1217,10 @@ background: linear-gradient(to right, #928DAB, #1F1C2C);
                             <p>Thuditejaswi@gmail.com</p>
                         </div>
                     </li>
-                   
                 </ul>
             </div>
-            
-
-
-
-
-
-
-
 
             <div class="contact-form animate">
-                
                 <form id="contactForm" action="https://formspree.io/f/thuditejaswi@gmail.com" method="POST">
                     <div class="form-group">
                         <input type="text" name="name" class="form-control" placeholder="Your Name" required>
@@ -972,8 +1238,6 @@ background: linear-gradient(to right, #928DAB, #1F1C2C);
                     <input type="text" name="_gotcha" style="display:none">
                     <button type="submit" class="btn">Send Message</button>
                 </form>
-
-
             </div>
         </div>
     </section>
@@ -986,10 +1250,6 @@ background: linear-gradient(to right, #928DAB, #1F1C2C);
                 <a href="https://github.com/thuditejaswi" target="_blank"><i class="fab fa-github"></i></a>
                 <a href="https://www.linkedin.com/in/tejaswithudi/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
                 <a href="mailto:Thuditejaswi@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
-           
-                
-                <!-- <a href="" target="_blank"><i class="fab fa-twitter"></i></a>
-                <a href="" target="_blank"><i class="fab fa-instagram"></i></a> -->
             </div>
             <p>Made with <i class="fas fa-heart" style="color: var(--accent);"></i> by Tejaswi</p>
         </div>
@@ -1055,10 +1315,31 @@ background: linear-gradient(to right, #928DAB, #1F1C2C);
             });
         }
         
+        // Experience Timeline Animation
+        const experienceItems = document.querySelectorAll('.experience-item');
+        
+        function checkExperienceScroll() {
+            const triggerBottom = window.innerHeight / 5 * 4;
+            
+            experienceItems.forEach((item, index) => {
+                const itemTop = item.getBoundingClientRect().top;
+                
+                if (itemTop < triggerBottom) {
+                    setTimeout(() => {
+                        item.classList.add('show');
+                    }, index * 200);
+                }
+            });
+        }
+        
         // Initial check
         checkScroll();
+        checkExperienceScroll();
         
-        window.addEventListener('scroll', checkScroll);
+        window.addEventListener('scroll', () => {
+            checkScroll();
+            checkExperienceScroll();
+        });
         
         // Progress Bars Animation
         function animateProgressBars() {
